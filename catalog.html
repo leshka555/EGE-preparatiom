@@ -20,22 +20,31 @@
 
   <section class="search-sort">
     <input type="text" id="searchInput" placeholder="Поиск по предмету..." />
+    <div class="sort-controls">
+    <label>Сортировка по:
+      <select id="sortSelect">
+        <option value="">Нет</option>
+        <option value="subject">Предмет (A-Z)</option>
+        <option value="level">Уровень (продвинутый → начальный)</option>
+      </select>
+    </label>
+  </div>
   </section>
 
   <section class="catalog">
-    <a href="detail.html" class="catalog-item" data-subject="math" data-level="advanced">
+    <a href="detail.html" class="catalog-item" data-subject="Математика" data-level="advanced">
       <h3>Математика (Профиль)</h3>
       <p>Углублённый курс + реальные задачи из ЕГЭ</p>
     </a>
-    <div class="catalog-item" data-subject="russian" data-level="basic">
+    <div class="catalog-item" data-subject="Русский язык" data-level="basic">
       <h3>Русский язык</h3>
       <p>Практика с экспертами ЕГЭ, разбор сочинений</p>
     </div>
-    <div class="catalog-item" data-subject="physics" data-level="advanced">
+    <div class="catalog-item" data-subject="Физика" data-level="advanced">
       <h3>Физика</h3>
       <p>Подготовка с нуля до 90+ баллов</p>
     </div>
-    <div class="catalog-item" data-subject="informatics" data-level="advanced">
+    <div class="catalog-item" data-subject="Информатика" data-level="advanced">
       <h3>Информатика</h3>
       <p>Алгоритмы, программирование и задания второй части</p>
     </div>
@@ -46,5 +55,6 @@
       <p>&copy; 2025 Подготовка к ЕГЭ</p>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
