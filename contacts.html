@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Контакты</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Контактная информация</h1>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <form class="contact-form" id="contactForm" novalidate>
+      <h2>Свяжитесь с нами</h2>
+
+      <input type="text" id="name" placeholder="Ваше имя" required />
+      <small class="error-message" id="nameError"></small>
+
+      <input type="email" id="email" placeholder="Email" required />
+      <small class="error-message" id="emailError"></small>
+
+      <textarea id="message" placeholder="Сообщение" rows="5" required></textarea>
+      <small class="error-message" id="messageError"></small>
+
+      <button type="submit">Отправить</button>
+      <p class="success-message" id="successMessage"></p>
+    </form>
+
+
+    <div class="contact-info">
+      <h2>Наши контакты</h2>
+      <p>Email: info@egehelp.ru</p>
+      <p>Телефон: +7 (999) 123-45-67</p>
+      <p>Адрес:</p>
+
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2286.4556736422633!2d82.991189576359!3d55.03523134703177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfef2b50b87cc5%3A0xd59ad9f6015666bd!2z0KLQsNC8LCDQs9C00LUg0LLRgdC10LPQtNCwINGF0L7RgNC-0YjQvg!5e0!3m2!1sru!2snl!4v1750341580948!5m2!1sru!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="socials">
+        <a href="https://t.me" target="_blank">Telegram</a>
+        <a href="https://vk.com" target="_blank">VK</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Подготовка к ЕГЭ</p>
+    </div>
+  </footer>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+    const successMessage = document.getElementById('successMessage');
+
+    let hasError = false;
+
+    // Очистка прошлых ошибок
+    [name, email, message].forEach(field => field.classList.remove('error'));
+    [nameError, emailError, messageError].forEach(err => {
+      err.textContent = '';
+      err.style.display = 'none';
+    });
+    successMessage.textContent = '';
+    successMessage.style.display = 'none';
+
+    // Проверка имени
+    if (!name.value.trim()) {
+      name.classList.add('error');
+      nameError.textContent = 'Введите имя.';
+      nameError.style.display = 'block';
+      hasError = true;
+    }
+
+    // Проверка email
+    if (!email.value.trim()) {
+      email.classList.add('error');
+      emailError.textContent = 'Введите email.';
+      emailError.style.display = 'block';
+      hasError = true;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      email.classList.add('error');
+      emailError.textContent = 'Введите корректный email.';
+      emailError.style.display = 'block';
+      hasError = true;
+    }
+
+    // Проверка сообщения
+    if (!message.value.trim()) {
+      message.classList.add('error');
+      messageError.textContent = 'Введите сообщение.';
+      messageError.style.display = 'block';
+      hasError = true;
+    }
+
+    if (!hasError) {
+      successMessage.textContent = 'Сообщение успешно отправлено!';
+      successMessage.style.display = 'block';
+
+      // Очистка формы
+      name.value = '';
+      email.value = '';
+      message.value = '';
+    }
+  });
+</script>
+
+
+</body>
+</html>

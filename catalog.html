@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Каталог | Подготовка к ЕГЭ</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Каталог предметов</h1>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="search-sort">
+    <input type="text" id="searchInput" placeholder="Поиск по предмету..." />
+    <div class="sort-controls">
+    <label>Сортировка по:
+      <select id="sortSelect">
+        <option value="">Нет</option>
+        <option value="subject">Предмет (A-Z)</option>
+        <option value="level">Уровень (продвинутый → начальный)</option>
+      </select>
+    </label>
+  </div>
+  </section>
+
+  <section class="catalog">
+    <a href="detail.html" class="catalog-item" data-subject="Математика" data-level="advanced">
+      <h3>Математика (Профиль)</h3>
+      <p>Углублённый курс + реальные задачи из ЕГЭ</p>
+    </a>
+    <div class="catalog-item" data-subject="Русский язык" data-level="basic">
+      <h3>Русский язык</h3>
+      <p>Практика с экспертами ЕГЭ, разбор сочинений</p>
+    </div>
+    <div class="catalog-item" data-subject="Физика" data-level="advanced">
+      <h3>Физика</h3>
+      <p>Подготовка с нуля до 90+ баллов</p>
+    </div>
+    <div class="catalog-item" data-subject="Информатика" data-level="advanced">
+      <h3>Информатика</h3>
+      <p>Алгоритмы, программирование и задания второй части</p>
+    </div>
+  </section>
+  <div class="pagination" id="pagination"></div>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Подготовка к ЕГЭ</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

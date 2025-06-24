@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Математика — Подробно</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Математика (Профиль)</h1>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="detail-container">
+    <div class="gallery">
+      <img class="main-image" src="math-main.avif" alt="Основное изображение" />
+      <div class="thumbnails">
+        <img src="math1.jpeg" alt="Превью 1" />
+        <img src="math2.jpg" alt="Превью 2" />
+        <img src="math3.jpg" alt="Превью 3" />
+      </div>
+    </div>
+
+    <div class="details">
+      <h2>Описание</h2>
+      <p>Курс по математике профильного уровня включает в себя все темы, необходимые для успешной сдачи ЕГЭ. Занятия проводятся с опытными преподавателями, используются авторские методики и регулярные тестирования.</p>
+
+      <h3>Характеристики</h3>
+      <ul>
+        <li>Формат: Онлайн и оффлайн</li>
+        <li>Длительность: 4 месяца</li>
+        <li>Уровень: Продвинутый</li>
+        <li>Подходит для: 10-11 классов</li>
+      </ul>
+
+      <h3>Отзывы</h3>
+      <h3>Оставить отзыв</h3>
+      <form id="reviewForm" class="review-form">
+        <input type="text" id="nameInput" placeholder="Ваше имя" required />
+        <textarea id="messageInput" placeholder="Ваш отзыв" required></textarea>
+        <button type="submit">Добавить</button>
+      </form>
+
+      <div id="reviewsList"></div>
+      <div class="reviews">
+        <div class="review">
+          <p><strong>Алина:</strong> Занятия очень помогли! Преподаватель объяснял доступно, а задания были прямо как на экзамене.</p>
+        </div>
+        <div class="review">
+          <p><strong>Максим:</strong> Понравился подход — всё структурировано и понятно. Получил 90 баллов, доволен!</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Подготовка к ЕГЭ</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
